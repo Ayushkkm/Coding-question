@@ -1,5 +1,5 @@
 class Solution {
-    
+
     public static int first_Occurrance(int arr[],int k){
         int start = 0 ;
         int end = arr.length-1;
@@ -46,14 +46,12 @@ class Solution {
         return ans;
     }
 
-    
-    int count(int[] arr, int n, int x) {
+   public int[] searchRange(int[] nums, int target) {
         
-        int first = first_Occurrance(arr,x);
+        int a = first_Occurrance(nums,target);
+        int b = last_Occurrance(nums,target);
+
+        return new int[]{a,b};
         
-        if(first==-1) return 0 ; // x not found
-        
-        int last = last_Occurrance(arr,x);
-        return last-first+1;
     }
 }

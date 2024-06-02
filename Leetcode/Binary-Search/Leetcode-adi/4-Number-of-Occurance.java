@@ -1,5 +1,5 @@
 class Solution {
-    
+    // GFG
     public static int first_Occurrance(int arr[],int k){
         int start = 0 ;
         int end = arr.length-1;
