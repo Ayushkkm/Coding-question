@@ -1,6 +1,6 @@
-
-public class Q19_Allocate_Minimum_Number_Of_Pages {
-
+class Solution 
+{
+    
     public static boolean isValid(int arr[] , int k , int mid){
 
         int student = 1;
@@ -27,7 +27,7 @@ public class Q19_Allocate_Minimum_Number_Of_Pages {
         int end = 0;
         int ans = -1;
 
-        if(k>arr.length) return -1; // student > books -> not solution
+        if(k>arr.length) return -1; //
 
         for(int i = 0 ; i < arr.length ; i++){  // TC -> O(N)
             start = Math.max(start,arr[i]);
@@ -48,15 +48,13 @@ public class Q19_Allocate_Minimum_Number_Of_Pages {
       return ans;
 
     }
-    public static void main(String[] args) {
-
-        int arr[] = {10,20,30,40};
-
-        int arr1[] = {10,5,20};
-
-        int a = Allocate_Pages(arr,2);
-        int b = Allocate_Pages(arr1,2);
-
-        System.out.println(a + " " + b);  // TC -> O(NlogN)  -> While loop + isValid
+   
+    
+    public static int findPages(int[]A,int N,int M)
+    
+    {
+       int minPages = Allocate_Pages(A,M);
+       
+       return minPages;
     }
-}
+};

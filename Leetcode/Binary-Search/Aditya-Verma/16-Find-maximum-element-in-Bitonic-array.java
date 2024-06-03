@@ -6,10 +6,10 @@ public class Q16_Find_Maximum_element_in_Bitonic_array {
         int end = arr.length -1;
         int n = arr.length -1;
 
-        while(start < end){
+        while(start <= end){
             int mid = start + (end-start)/2;
 
-            if(mid>0 && mid<n-1){ // check -> mid is not at -> 0th index -> and n-1 index
+            if(mid>0 && mid<n){ // check -> mid is not at -> 0th index -> and n-1 index
                 if(arr[mid]>arr[mid-1] && arr[mid] > arr[mid+1]){
                     return mid;
                 }
