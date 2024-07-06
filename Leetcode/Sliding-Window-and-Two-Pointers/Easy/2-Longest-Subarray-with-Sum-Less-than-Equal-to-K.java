@@ -154,3 +154,7 @@ public class Solution {
     }
 }
 
+// TC -> O(N)
+// SC -> O(1)
+
+
