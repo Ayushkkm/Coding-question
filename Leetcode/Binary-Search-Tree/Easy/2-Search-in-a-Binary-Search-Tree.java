@@ -13,10 +13,15 @@
  *     }
  * }
  */
+
 class Solution {
     public TreeNode searchBST(TreeNode root, int val) {
         
-        while(root!=null && root.val !=val){ //first check null condition -> bcoz if -> first val condition -> and root = null -> null.val give error
+        while(root!=null ){ 
+
+            if(root.val == val){
+                return root;
+            }
 
             root = val < root.val ? root.left : root.right;
         }
@@ -24,5 +29,19 @@ class Solution {
         return root;
     }
 }
+
 // TC -> O(log2(N)) 
 // SC -> O(1)
+
+// class Solution {
+//     public TreeNode searchBST(TreeNode root, int val) {
+        
+//         while(root!=null && root.val !=val){ //first check null condition -> bcoz if -> first val condition -> and root = null -> null.val give error
+
+//             root = val < root.val ? root.left : root.right;
+//         }
+
+//         return root;
+//     }
+// }
+

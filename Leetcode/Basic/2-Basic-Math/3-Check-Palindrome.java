@@ -36,3 +36,25 @@ class Solution {
         return true;
     }
 }
+
+// Method 2 
+
+class Solution {
+    public boolean isPalindrome(int x) {
+        String s = Integer.toString(x);
+        
+        int n = s.length();
+        int i =0 ;
+        while(i<= n/2){
+            if(s.charAt(i)!=s.charAt(n-i-1)){
+                return false;
+            }
+
+            i++;
+        }
+
+        return true;
+    }
+}
+// TC -> O(N/2)
+// SC -> O(N) -> string
