@@ -17,3 +17,6 @@ class Solution
       }
   }
 }
+
+// TC -> O(N^2)
+// SC -> O(1)

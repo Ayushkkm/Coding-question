@@ -29,6 +29,7 @@ class Solution
              arr[j] = mergeA[i]; 
          }
     }
+
     void mergeSort(int arr[], int l, int r)
     {
         if(l>=r) return ;
@@ -40,3 +41,6 @@ class Solution
         merge(arr,l,m,r);
     }
 }
+
+// TC -> O(NlogN)
+// SC -> O(N)

@@ -14,3 +14,7 @@ void selectionSort(int arr[], int n)
 	        arr[small] = temp;
 	    }
 	}
+
+// TC -> O(N^2)
+// SC -> O(1)
+

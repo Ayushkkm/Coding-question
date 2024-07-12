@@ -33,4 +33,6 @@ class Solution
         return i;
     }
 }
-// Time Complexity: O(N*log(N))
+
+// TC -> O(N*log(N))
+// SC -> O(1)
