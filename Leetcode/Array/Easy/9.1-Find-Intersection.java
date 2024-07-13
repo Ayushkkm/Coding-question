@@ -8,7 +8,7 @@ class Solution {
         int i = 0 ; 
         int j = 0;
 
-        while (i < n && j < m) { // don't use if{} if{} , use if{} else if{}
+        while (i < n && j < m) { // don't use if{} if{} , use if{} else if{} -> if(correct) -> i++ -> now second if -> use new i -> break loop
           if (nums1[i] < nums2[j]) {
 
             i++;
@@ -34,3 +34,5 @@ class Solution {
 
     }
 }
+
+

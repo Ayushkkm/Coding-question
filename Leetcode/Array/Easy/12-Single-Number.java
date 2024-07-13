@@ -9,3 +9,6 @@ class Solution {
         return a ;
     }
 }
+
+// TC -> O(N)
+// SC -> O(1)

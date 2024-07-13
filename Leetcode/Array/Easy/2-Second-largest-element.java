@@ -18,3 +18,6 @@ class Solution {
        return smax;
     }
 }
+
+// TC -> O(n)
+// SC -> O(1)

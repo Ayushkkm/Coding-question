@@ -1,31 +1,38 @@
 class Solution {
     public int subarraySum(int[] nums, int k) {
+       
+       // if nums -> contains -> +ve
+       int n = nums.length;
+
        int count = 0 ;
        int l = 0;
        int r = 0;
-       int sum = nums[0];
-       int n = nums.length;
+
+       int sum = 0;
       
-       int maxL = 0;
+       int maxLen = 0;
 
        while(r<n){
+        sum += nums[r];
+        
+        while( l<r && sum>k){ // l < r -> important -> test fail -> if l == r -> and shrink
+            sum -= nums[l];
+            l++;
+        }
 
-       while(l<r && sum>k){
-        sum -= nums[l];
-        l++;
-       }
-
-       if(sum==k){
-        count++;
-        maxL = Math.max(maxL , r-l+1);
-       }
+        if(sum==k){
+            count++;
+            maxLen = Math.max(maxLen , r - l +1);
+        }
 
         r++;
-        if(r<n) sum += nums[r];
 
        }
 
-       return count ;
+       return count;
 
+       
     }
 }
+// TC -> O(n)
+// SC -> O(1)
