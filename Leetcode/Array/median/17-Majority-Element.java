@@ -43,7 +43,14 @@ class Solution {
 
 //       int num = -1;
 
-//       for(int i = 0 ; i <n ; i++){
+
+    // for(int key : map.keySet()){
+    //     if(map.get(key) > n/2){
+    //         num = key;
+    //     }
+    //  }
+
+//     for(int i = 0 ; i <n ; i++){
 //          if(map.get(nums[i]) > n/2){
 //             num = nums[i];
 //          }
