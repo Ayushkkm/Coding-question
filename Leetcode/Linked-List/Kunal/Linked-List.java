@@ -66,7 +66,7 @@ public class LL {
         }
 
         Node temp = head;
-        for(int i =1; i<index; i++){
+        for(int i =1; i<index; i++){ // 1 -> index -1 -> one before -> node index
             temp = temp.next;
         }
 
@@ -94,7 +94,7 @@ public class LL {
     public Node get(int index){
         Node node = head;
 
-        for(int i =0; i<index ; i++){
+        for(int i =0; i<index ; i++){ // 0 -> index -1 -> to reach -> index node
             node = node.next;
         }
         return node;
@@ -104,7 +104,7 @@ public class LL {
         if(size<=1){
             return deleteFirst();
         }
-        Node secondLast = get(size-2);
+        Node secondLast = get(size-2); // n-2 -> give -> 0 -> n-3 -> loop run
         int value = tail.value;
         tail = secondLast;
         secondLast.next = null;
