@@ -18,7 +18,7 @@ class Solution {
 
         }
 
-        return end;
+        return end; // give ceil -> value -> greater than -> k -> more far from 0th index -> comparasion -> to other greater value
     }
 
     public int maxDistance(int[] nums1, int[] nums2) {
