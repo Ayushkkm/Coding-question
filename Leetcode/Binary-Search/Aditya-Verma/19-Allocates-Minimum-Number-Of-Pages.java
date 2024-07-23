@@ -9,18 +9,20 @@ public class Q19_Allocate_Minimum_Number_Of_Pages {
         for(int i = 0 ; i< arr.length ; i++){
             sum += arr[i];
 
-            if(sum>mid){
+            if(sum > mid){ // if page greater -> than limit -> go to next -> student
+               
                 student++;
                 sum = arr[i];
             }
 
-            if(student>k) return false;
+            if(student>k) return false; // student < k -> this condition -> check previously -> if(k>arr.length) return -1;
         }
         return true;
     }
 
     public static int Allocate_Pages(int arr[] , int k ){
-         //  start -> max element
+
+        // start -> max element
         // end  -> sum of all element
 
         int start = Integer.MIN_VALUE;
@@ -35,16 +37,21 @@ public class Q19_Allocate_Minimum_Number_Of_Pages {
         }
 
         while(start<= end){  // TC -> O(NlogN)  -> While loop + isValid
+
             int mid = start + (end-start)/2;
 
-            if(isValid(arr,k,mid)){
-                ans = mid;
-                end = mid-1;
+            if(isValid(arr,k,mid)){ // if mid -> valid -> mid -> to high can go -> for less page -> move left 
+              
+                ans = mid;  
+                end = mid-1; // go -> left
             }
-            else {
+
+            else {  // if pages -> is not sufficient -> move right -> for more pages
+                         
                 start = mid+1;
             }
         }
+        
       return ans;
 
     }
