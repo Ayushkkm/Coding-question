@@ -64,3 +64,46 @@ class Solution {
 
 // TC -> O(logN)
 // SC -> O(1)
+
+
+// Striver code -> simple also -> it is only -> for find an element -> not for minimum -> or number of times -> rotated
+
+public boolean search(int[] nums, int target) {
+        int start = 0, end = nums.length - 1;
+
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+
+            // Check if the mid element is the target
+            if (nums[mid] == target) {
+                return true;
+            }
+
+            // Check which part is sorted
+            if (nums[start] <= nums[mid]) { // Left part is sorted
+
+                if (nums[start] <= target && target < nums[mid]) {
+                    end = mid - 1; // Target is in the left part
+                } 
+                
+                else {
+                    start = mid + 1; // Target is in the right part
+                }
+            } 
+            
+            else { // Right part is sorted
+                
+                if (nums[mid] < target && target <= nums[end]) {
+                    start = mid + 1; // Target is in the right part
+                } 
+                
+                else {
+                    end = mid - 1; // Target is in the left part
+                }
+            }
+        }
+
+        // If we exit the loop, the target is not present
+        return false;
+    }
+
