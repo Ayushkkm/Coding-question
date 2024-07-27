@@ -56,8 +56,10 @@ class stack{
     }
 
     public int size(){
-        
+
         return size;
     }
 
 }
+
+// Every Operation -> O(1)
