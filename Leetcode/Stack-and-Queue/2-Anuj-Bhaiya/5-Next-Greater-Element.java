@@ -1,7 +1,7 @@
 
 class solution{
 
-    public ArrayList<Integer> previousGreater(int arr[]){
+    public ArrayList<Integer> NextGreater(int arr[]){
 
         Stack<Integer> st = new Stack<>();
 
@@ -25,7 +25,15 @@ class solution{
             st.push(arr[i]); // push -> current element
         }
 
-        return ans;
+        // Our -> ans -> list -> contains -> next Greater -> from last
+
+        ArrayList<Integer> result = new ArrayList<>(); // Reverse the -> result list -> to maintain -> the original order
+        
+        for (int i = ans.size() - 1; i >= 0; i--) {
+            result.add(ans.get(i));
+        }
+
+        return result;
 
     }
 }

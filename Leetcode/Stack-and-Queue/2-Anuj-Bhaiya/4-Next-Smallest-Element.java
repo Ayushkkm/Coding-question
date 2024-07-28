@@ -1,7 +1,7 @@
 
 class Solution{
 
-    public ArrayList<Integer> previousSmall(int arr[]){
+    public ArrayList<Integer> NextSmaller(int arr[]){
 
         Stack<Integer> st = new Stack<>();
 
@@ -25,7 +25,15 @@ class Solution{
             st.push(arr[i]); // push -> current element
         }
 
-        return ans;
+        // Our -> ans -> list -> contains -> next smaller -> from last
+
+        ArrayList<Integer> result = new ArrayList<>(); // Reverse the -> result list -> to maintain -> the original order
+        
+        for (int i = ans.size() - 1; i >= 0; i--) {
+            result.add(ans.get(i));
+        }
+
+        return result;
 
     }
 }
