@@ -580,7 +580,7 @@ public class Question {
 
         }
 
-        if(hf != null){
+        if(hf != null){ // if last is hs -> hs != null -> its last -> is at null already
             hf.next = null;
         }
 
