@@ -63,5 +63,5 @@ class Solution {
     }
 }
 
-// TC -> O((max-min)*logN)
+// TC -> O(N*log(max-min))
 // SC -> O(1)
