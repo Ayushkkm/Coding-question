@@ -1,3 +1,5 @@
+// Sum 1 to n Divisors - gfg
+
 class Solution {
     static long sumOfDivisors(int N) {
         long sum = 0;
@@ -17,35 +19,31 @@ class Solution {
 // TC -> O(N)
 // SC -> O(1)
 
-// This code is of O(N^2)
 
-class Solution {
-     
-    public static int sumi(int n){
-        int sum = 0;
-        
-        for(int i = 1; i <=n; i++){
-            if(n % i == 0){
-                sum += i;
-            }
-        }
-        
-        return sum;
-        
-    }
+//  Give TLE
+
+// class Solution{
     
-    static int sumOfDivisors(int N) {
-        
-        int sum = 0;
-        
-        for(int i = 1 ; i <= N ; i++){
-            
-            if(N%i == 0){
-                sum += sumi(i);
-            }
-        }
-        
-        return sum;
-        
-    }
-}
+//     public static long sumi(int n){
+//          long sum = 0;
+         
+//          for(int i = 1 ; i<=n ; i++){
+//             if (n % i == 0) {
+//                 sum += i;
+//             }
+//          }
+         
+//          return sum;
+//     }
+    
+//     static long sumOfDivisors(int N){
+    
+//     long sum = 0; 
+    
+//       for(int i = 1 ; i <=N ; i++){
+//           sum += sumi(i);
+//       }
+      
+//       return sum;
+//     }
+// }
