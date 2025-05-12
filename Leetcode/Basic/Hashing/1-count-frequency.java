@@ -1,8 +1,9 @@
+// Frequencies in a Limited Array - gfg question changes
+
 class Solution{
     //Function to count the frequency of all elements from 1 to N in the array.
     public static void frequencyCount(int arr[], int N, int P)
     {
-      
       
        int hash[] = N>P ? new int[N] : new int[P]; // which is greater -> N or P -> make the array 
        
