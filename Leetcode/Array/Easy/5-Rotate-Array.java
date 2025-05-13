@@ -15,9 +15,11 @@ class Solution {
         k = k % n;
         if(k<0) k = k + n;
 
-        reverse(nums, 0 , n - k - 1);
+        reverse(nums, 0 , n - k - 1); // if forward shift 
         reverse(nums , n - k , n-1);
         reverse(nums , 0 , n-1);
+
+        // for backward shift -> use reverse(nums, 0 , k)  -> reverse(nums, k+1 , n-1) -> reverse(nums , 0 , n-1)
 
     }
 }
