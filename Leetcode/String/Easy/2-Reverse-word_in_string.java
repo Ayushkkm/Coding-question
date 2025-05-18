@@ -14,119 +14,55 @@ class Solution {
                 reversed.append(" ");
             }
         }
-        
-        return reversed.toS11tring();
+        return reversed.toString();
     }
 }
 
-// Method 2  
+// Expression	Meaning
+// \\s	-> Any whitespace character (space, tab, newline)
+// +	-> One or more occurrences
+// \\s+	-> One or more whitespace characters
+// .split("\\s+") -> Split string by one or more whitespace characters
+
+// Method 2 (easy)  
 
 // class Solution {
 //     public String reverseWords(String s) {
-       
-//         StringBuilder str = new StringBuilder(s);
-//         str.reverse(); // make whole string reverse
-
-//         s = str + "";
-//         str = new StringBuilder("");
-
-//         // now make each word reverse -> our answer
-
-//        String ans = "";
-//        int n = s.length();
-
-//        int countleading = 0 ;
-//        int counttrailing = 0 ;
-
-//        for(int i = 0 ; i< n ; i++){
-//            char ch = s.charAt(i);
-
-//         if(ch==' ' && i==0){
-//             while(s.charAt(i)==' '){
-//                countleading++;
-//                i++;
-//             }
-//             i--;
-                                 
-//         }
-//         else if(ch==' ' && i==n-1){
-//             while(s.charAt(i)==' '){
-//                counttrailing++;
-//                i--;
-//             }
-//             break;
-//         }
-//        }
-    
-//        for(int i = countleading ; i < n-counttrailing; i++){
-//         char ch = s.charAt(i);
-
-//         if(i!=0 && s.charAt(i) ==' ' && s.charAt(i-1)==' ') continue;
-
-//         if(ch != ' '){
-//             str.append(ch);
-//         }
-        
-//         else {
-//             str.reverse();
-//             ans += str + "";
-//             ans += " ";
-//             str = new StringBuilder("");
-//         }
-
-//        }
-//        str.reverse();
-//        ans+= str + "";
-
-//        return ans;
-
-//     }
-// }
-
-
-// Method - 3 
-
-// class Solution {
-//     public String reverseWords(String s) {
-        
+//         int n = s.length();
+//         StringBuilder str = new StringBuilder();
 //         String ans = "";
-//         StringBuilder str = new StringBuilder("");
-//         int count  = 0;
-//         for(int i = s.length() -1 ; i>=0 ; i--){
+        
+//         for(int i = n-1 ; i>=0 ; i--){
 //             char c = s.charAt(i);
-
-                       
-//            // for middle gap 
-//             if(i!=0 && s.charAt(i) ==' ' && s.charAt(i-1)==' ') continue;
-           
-//            // for starting gaps 
-//             if(i ==0 && s.charAt(0) == ' ') continue;
             
-//             // for last gaps
-//             if(c != ' '){
-//                 count++;
-               
+//             if(c == ' ' && str.length() == 0){ // to remove unnecessary spaces -> leading -> trailing -> middle
+//               continue;
 //             }
-           
-//            if(count!=0){
-//                if(c != ' '){
+
+//             if(c != ' '){
 //                 str.append(c);
 //             }
 //             else{
 //                 str.reverse();
-//                 ans+= str;
-//                 ans+= " ";
-//                 str = new StringBuilder("");
+//                 if(ans.length() == 0){ // first -> without space
+//                     ans += str + "";
+//                 }
+//                 else{
+//                     ans += " " + str; // make space betwwen words
+//                 }
+//                 str = new StringBuilder(); // empty str -> now if a unnecessary spaces -> occur -> we continue it
 //             }
-
-//            }
-            
 //         }
 
-//         str.reverse();
-
-//         ans += str;
-
+//         if(str.length() != 0){
+//             str.reverse();
+//             if(ans.length() == 0){ // first -> without space -> "aYhandf"
+//                 ans += str + "";
+//             }
+//             else{
+//                 ans += " " + str; // make space betwwen words
+//             }
+//         }
 //         return ans;
 //     }
 // }
