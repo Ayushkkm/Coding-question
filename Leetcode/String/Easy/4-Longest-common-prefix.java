@@ -21,6 +21,9 @@ class Solution {
 
         for(int i = 1 ; i < strs.length ; i++){
             res = common(res , strs[i]);
+            if(res.length() == 0){
+                return "";
+            }
         }
 
         return res;
