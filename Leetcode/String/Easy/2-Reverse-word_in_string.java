@@ -4,7 +4,6 @@ class Solution {
         //how many space it remove and split in array
         
         String[] words = s.trim().split("\\s+");
-        
        
         StringBuilder reversed = new StringBuilder();
         
