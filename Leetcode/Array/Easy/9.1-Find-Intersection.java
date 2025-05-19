@@ -22,7 +22,7 @@ class Solution {
               i++;
               j++;
          }
-}
+        }
        
        int arr1[] = new int[arr.size()];
 
