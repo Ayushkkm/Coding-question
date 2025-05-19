@@ -47,7 +47,7 @@ class Solution {
 //                     ans += str + "";
 //                 }
 //                 else{
-//                     ans += " " + str; // make space betwwen words
+//                     ans += " " + str; // make space between words
 //                 }
 //                 str = new StringBuilder(); // empty str -> now if a unnecessary spaces -> occur -> we continue it
 //             }
