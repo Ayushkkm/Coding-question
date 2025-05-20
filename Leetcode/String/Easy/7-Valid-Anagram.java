@@ -20,8 +20,28 @@ class Solution {
     }
 }
 
+// above give 99% beat -> because of for(char ch : s.toCharArray()) -> convert whole string to -> char -> charAt(i) -> take more time 
 
-// Beat 54%
+// class Solution {
+//     public boolean isAnagram(String s, String t) {
+//         int hash[] = new int[26];
+//         if(s.length() != t.length()) return false;
+//         for(int i = 0; i < s.length(); i++){
+        
+//         hash[s.charAt(i) - 97]++;
+//         hash[t.charAt(i) - 97]--;
+//         }
+
+//         for(int val : hash){
+//             if(val!=0) return false;
+//         }
+
+//         return true;
+
+//     }
+// }
+
+// Beat 55.5%
 
 // class Solution {
 //     public boolean isAnagram(String s, String t) {
@@ -43,3 +63,5 @@ class Solution {
 //         return true;
 //     }
 // }
+
+// Beat 54%
