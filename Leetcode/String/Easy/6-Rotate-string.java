@@ -8,27 +8,22 @@ class Solution {
 
 // class Solution {
 //     public boolean rotateString(String s, String goal) {
+    
+//     StringBuilder str1 = new StringBuilder(s);
 
-//         StringBuilder str = new StringBuilder(s);
-//         int n = s.length();
+//     if (str1.toString().equals(goal)) return true;
+
+//     int n = str1.length();
+
+//     for (int i = 0; i < n; i++) {
+//         str1.append(str1.charAt(0)); // add first element -> last
+//         str1.deleteCharAt(0);       // delete first element
         
-//         for(int i = 0 ; i < n ; i++){ 
-           
-//            char last = str.charAt(n-1);
-
-//            for(int j = n-1 ; j > 0 ; j--){
-
-//             char prev = str.charAt(j-1);
-//             str.setCharAt(j,prev);
-
-//            }
-//            str.setCharAt(0,last);
-
-//            if(str.toString().equals(goal)) return true;
-
+//         if (str1.toString().equals(goal)) {
+//             return true;
 //         }
-//         return false;
 //     }
 
-        
+//     return false;
+// }
 // }
