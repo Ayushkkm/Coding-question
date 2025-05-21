@@ -6,9 +6,9 @@ class Solution {
         int n = nums.length;
         int count = 0 ;
         
-        Map<Integer,Integer> presum = new HashMap<Integer, Integer>();
+        Map<Integer,Integer> presum = new HashMap<Integer, Integer>(); // (sum,count) 
         
-        presum.put(0,1); // if summ==k , presum.get(sum) -> null pointer exception
+        presum.put(0,1); // if summ==k -> rem = 0 -> presum.get(sum) -> null pointer exception
 
         for(int i = 0 ; i< n ; i++){
             
