@@ -6,7 +6,7 @@ class Solution {
         int n = nums.length;
         int count = 0 ;
         
-        Map<Integer,Integer> presum = new HashMap<Integer, Integer>(); // (sum,count) 
+        Map<Integer,Integer> presum = new HashMap<Integer, Integer>(); // (sum,frequency) 
         
         presum.put(0,1); // if summ==k -> rem = 0 -> presum.get(sum) -> null pointer exception
 
