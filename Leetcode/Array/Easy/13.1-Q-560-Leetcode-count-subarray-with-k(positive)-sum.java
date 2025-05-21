@@ -31,8 +31,8 @@ class Solution {
 
        return count;
 
-       
     }
 }
-// TC -> O(n)
+
+// TC -> O(2n)
 // SC -> O(1)
