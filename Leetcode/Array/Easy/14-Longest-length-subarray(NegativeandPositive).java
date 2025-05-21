@@ -41,3 +41,6 @@ class Solution{
     }
     
 }
+
+// TC -> O(N*log(N)) -> log(N) for -> map search
+// SC -> O(N)
