@@ -1,58 +1,50 @@
 class Solution {
 
-    class Pair{
-        char cha;
+    class Pair implements Comparable<Pair> {
+        char ch;
         int count;
 
-         Pair(char ch , int count){
-            this.cha = ch;
+        Pair(char ch, int count) {
+            this.ch = ch;
             this.count = count;
-         }
+        }
+
+        public int compareTo(Pair other) {
+            // Max-Heap: sort in decreasing order of count
+            return Integer.compare(other.count, this.count);
+        }
     }
 
     public String frequencySort(String s) {
+        
+        // small(97-122) , capital(65-90) , digits(48-57)
+        
+        int[] hash = new int[125];
+        
+        // toCharArray -> convert to char array -> each element -> find
 
-     // small(97-122) , capital(65-90) , digits(48-57)
-
-     int hash[] = new int[125];
-
-     // toCharArray -> convert to char array -> each element -> find
-
-     for(char ch : s.toCharArray()){
-        hash[ch]++;
-     }  
-    
-     // Make frequncy check list for each character
-     LinkedList<Pair> freq_lt = new LinkedList<Pair>();
-
-     for(int i = 48 ; i< 125 ; i++){
-        if(hash[i]>0){
-            char ch = (char)i ;
-
-            freq_lt.add(new Pair(ch,hash[i]));
+        for (char ch : s.toCharArray()) {
+            hash[ch]++;
         }
-     }
 
-    // sort in decending order -> for count
+        // Max-heap using natural ordering defined in Pair
+        PriorityQueue<Pair> maxHeap = new PriorityQueue<>();
 
-     Collections.sort(freq_lt , new Comparator<Pair>(){
-        public int compare(Pair a , Pair b){
-            return b.count - a.count;
+        for (int i = 48; i < 125; i++) {
+            if (hash[i] > 0) {
+                maxHeap.offer(new Pair((char) i, hash[i]));
+            }
         }
-     });
 
-     StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
 
-     for(Pair p : freq_lt){
-        int j = p.count;
-
-        while(j>0){ // add character wrt frequency
-            sb.append(p.cha);
-            j--;
+        while (!maxHeap.isEmpty()) {
+            Pair p = maxHeap.poll();
+            for (int i = 0; i < p.count; i++) {
+                sb.append(p.ch);
+            }
         }
-     }
 
-     return sb.toString();
-    
+        return sb.toString();
     }
 }
