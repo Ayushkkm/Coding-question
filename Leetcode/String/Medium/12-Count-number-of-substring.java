@@ -1,3 +1,5 @@
+// link - https://www.geeksforgeeks.org/problems/count-number-of-substrings4528/1
+
 class Solution
 {
     long substrCount (String S, int K) {
