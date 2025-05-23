@@ -1,7 +1,9 @@
+// IMP -> if you need to do substring -> and i and j given -> for substring -> pass(s,i,j) -> and in while(i,j) -> do you work -> don't do s.substring(i,j)
+
 class Solution {
 
     public boolean isPalindrome(String s , int i , int j){
-        while(i<j){
+        while(i<j){  // if string s = "a" -> i = 0 , j = 0 , -> while(i<j) -> not go -> direct -> return true
             char ch1 = s.charAt(i);
             char ch2 = s.charAt(j);
 
@@ -35,7 +37,8 @@ class Solution {
 }
 
 
-// Give TLE
+// Give TLE -> I use -> s.substring(i,j) and StringBuilder-> which consume more time -> 
+// if you need to do substring -> and i and j given -> for substring -> pass(s,i,j) -> and in while(i,j) -> do you work -> don't do s.substring(i,j)
 
 // class Solution {
 
