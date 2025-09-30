@@ -1,4 +1,3 @@
-// LeetCode problem: "560. Subarray Sum Equals K"
 
 class Solution {
     public int subarraySum(int[] nums, int k) {
