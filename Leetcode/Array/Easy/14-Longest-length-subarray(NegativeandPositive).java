@@ -24,7 +24,7 @@ class Solution{
             int rem = sum - K;
             
             //Calculate the length and update maxLen:
-            if(presum.containsKey(rem)){
+            if(presum.containsKey(rem)){  // k = 3 , arr = [0,3] -> not else if -> 0 we have to count at i = 1
                 int len = i - presum.get(rem);
                 
                 maxL = Math.max(maxL,len);
